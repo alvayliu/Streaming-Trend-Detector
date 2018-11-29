@@ -48,6 +48,8 @@ table with four columns. The first column contains the key which is the tweet’
 following columns contain the positive, neutral and negative counts for that minute. For every new minute, a new row is 
 created in the table and counts for the three sentiments are accumulated as new tweets from that minute arrive.
 
+![Content in Cassandra after running the program for a couple of minutes](https://github.com/alvayliu/Streaming-Trend-Detector/blob/master/cassandra_sentiment.png "Content in Cassandra")
+
 ### 4. Visualization
 Data is retrieved from the Cassandra table every second and sorted by the timestamp. Data from the last 30 minutes are 
 visualized in the web browser as a live bar plot created in Python with Plotpy and Dash. The number of positive, neutral 
@@ -55,6 +57,8 @@ and negative tweets for each minute are shown as stacked bars. A potential bottl
 is retrieved every second and sorted according to the timestamp. As the program runs, the Cassandra table will become 
 larger and the sorting will take longer time. We did not notice any delay from this in our experiments, however we only 
 ran the program for at most an hour which creates in total 60 entries in the Cassandra table.
+
+![Real-time visualization of the number of mentions and the sentiments](https://github.com/alvayliu/Streaming-Trend-Detector/blob/master/TrendDetector.png "Real-time visualization")
 
 # To run the code
 
