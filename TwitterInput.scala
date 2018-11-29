@@ -16,10 +16,10 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, Produce
 object TwitterInput extends App {
 
     //Connect to twitter and get twitter stream
-    val CONSUMER_API_KEY = "PNDlIzHgUUIauFCdVolig8A4F"
-    val CONSUMER_API_SECRET = "XL5SP49lDkTRWlY6OSdZzSVjdY4IE5mOAtTFzbfPcWQiIGSSJ2"
-    val ACCESS_TOKEN = "938324905346641920-gaTcdB5iR0NlBcHCZFicknYXHRGZ9MD"
-    val ACCESS_TOKEN_SECRET = "cbSjh6rvJC0C4FcDFbrUfqECGDfyLqjokIXrbOSL4cTjL"
+    val CONSUMER_API_KEY = "API_KEY"
+    val CONSUMER_API_SECRET = "API_SECRET"
+    val ACCESS_TOKEN = "ACCESS_TOKEN"
+    val ACCESS_TOKEN_SECRET = "TOKEN_SECRET"
 
     //Configuration of kafka producer and twitter specifics
     val config = new SparkConf().setAppName("twitter-stream-producer").setMaster("local[*]")
